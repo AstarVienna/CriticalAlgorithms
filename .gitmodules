@@ -1,0 +1,3 @@
+[submodule "LMS-image-reconstruction"]
+	path = LMS-image-reconstruction
+	url = git@github.com:sesquideus/anastasis
