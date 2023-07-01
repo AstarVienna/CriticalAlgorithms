@@ -1,5 +1,5 @@
 [submodule "LMS-image-reconstruction"]
-	path = 9-image-reconstruction
+	path = 9-IFU-image-reconstruction
 	url = git@github.com:sesquideus/anastasis
 [submodule "PyReduce_ELT"]
 	path = PyReduce_ELT
