@@ -2,7 +2,7 @@
 	path = 9-IFU-image-reconstruction
 	url = git@github.com:sesquideus/anastasis
 [submodule "PyReduce_ELT"]
-	path = PyReduce_ELT
+	path = 5a-LSS-wavelength-calibration-PyReduce-ELT
 	url = https://github.com/nadsabha/PyReduce_ELT
 [submodule "11-metis-pip-adi-reduce"]
 	path = 11-ADI-algorithm
