@@ -1,9 +1,9 @@
 [submodule "LMS-image-reconstruction"]
 	path = 9-IFU-image-reconstruction
-	url = git@github.com:sesquideus/anastasis
+	url = https://github.com/sesquideus/anastasis.git
 [submodule "PyReduce_ELT"]
 	path = 5a-LSS-wavelength-calibration-PyReduce-ELT
 	url = https://github.com/nadsabha/PyReduce_ELT
 [submodule "11-metis-pip-adi-reduce"]
 	path = 11-ADI-algorithm
-	url = git@github.com:gotten/11-metis-pip-adi-reduce.git
+	url = https://github.com/gotten/11-metis-pip-adi-reduce.git
