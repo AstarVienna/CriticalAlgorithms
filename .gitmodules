@@ -4,9 +4,6 @@
 [submodule "PyReduce_ELT"]
 	path = PyReduce_ELT
 	url = https://github.com/nadsabha/PyReduce_ELT
-[submodule "LSS_wavelength_calibration/PyReduce_ELT"]
-	path = 5a-LSS-wavelength-calibration/PyReduce_ELT
-	url = git@github.com:nadsabha/PyReduce_ELT.git
 [submodule "11-metis-pip-adi-reduce"]
 	path = 11-ADI-algorithm
 	url = git@github.com:gotten/11-metis-pip-adi-reduce.git
