@@ -1,3 +1,9 @@
 [submodule "LMS-image-reconstruction"]
 	path = LMS-image-reconstruction
 	url = git@github.com:sesquideus/anastasis
+[submodule "PyReduce_ELT"]
+	path = PyReduce_ELT
+	url = git@github.com:nadsabha/PyReduce_ELT.git
+[submodule "LSS_wavelength_calibration/PyReduce_ELT"]
+	path = LSS_wavelength_calibration/PyReduce_ELT
+	url = git@github.com:nadsabha/PyReduce_ELT.git
