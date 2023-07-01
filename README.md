@@ -9,7 +9,7 @@ git clone --recurse-submodules git@github.com:AstarVienna/CriticalAlgorithms.git
 
 ## 5a. LSS Wavelength calibration and distortion correction
 
-See `5a-LSS-wavelength-calibration` directory.
+See `5a-LSS-wavelength-calibration-PyReduce-ELT` directory.
 
 ## 5b. IFU Wavelength calibration and distortion correction
 
