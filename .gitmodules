@@ -5,5 +5,5 @@
 	path = PyReduce_ELT
 	url = git@github.com:nadsabha/PyReduce_ELT.git
 [submodule "LSS_wavelength_calibration/PyReduce_ELT"]
-	path = LSS_wavelength_calibration/PyReduce_ELT
+	path = LSS-wavelength-calibration/PyReduce_ELT
 	url = git@github.com:nadsabha/PyReduce_ELT.git
