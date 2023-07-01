@@ -17,7 +17,7 @@ See `5b-IFU-distortion` directory.
 
 ## 9. IFU image and cube reconstruction
 
-See `9-image-reconstruction` directory.
+See `9-IFU-image-reconstruction` directory.
 
 ## 11. ADI algorithm
 
