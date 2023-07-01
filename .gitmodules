@@ -8,5 +8,5 @@
 	path = 5a-LSS-wavelength-calibration/PyReduce_ELT
 	url = git@github.com:nadsabha/PyReduce_ELT.git
 [submodule "11-metis-pip-adi-reduce"]
-	path = 11-metis-pip-adi-reduce
+	path = 11-ADI-algorithm
 	url = git@github.com:gotten/11-metis-pip-adi-reduce.git
