@@ -21,4 +21,5 @@ See `9-image-reconstruction` directory.
 
 ## 11. ADI algorithm
 
-...
+See `11-ADI-algorithm` directory.
+
