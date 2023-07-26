@@ -83,7 +83,6 @@
 \definecolor{darkorange}{rgb}{1.0, 0.49, 0.0}
 
 \usepackage[many]{tcolorbox}
-\usepackage{multirow}
 
 % does not work with my version of biblatex:
 % \usepackage[defernumbers=true,backend=biber,hyperref=true,url=false]{biblatex}
@@ -106,7 +105,6 @@
 %\makeglossaries
 
 \usepackage{lastpage}
-\usepackage{multirow}
 \usepackage[%
    font=small,
    format=plain,
@@ -128,11 +126,9 @@
 \usepackage{subfloat}
 
 %% Write recipe names like this: \REC{metis_do_stuff}
-\makeatletter
 \lstdefinestyle{RECstyle}{%
   basicstyle=\ttfamily\color{darkgreen}%
   \lst@ifdisplaystyle\scriptsize\fi}
-\makeatother
 \newcommand{\REC}[1]{\lstinline[style=RECstyle]!#1!}
 
 %% Write requirements like this: \REQ{METIS-xxxx}
@@ -176,26 +172,6 @@
   \textup{#1{\mdseries\textsc{#2}}}%
 }
 
-%%%% \la...kleiner als ungef"ahr
-\def\la{\mathrel{\mathchoice {\vcenter{\offinterlineskip\halign{\hfil
-          $\displaystyle##$\hfil\cr<\cr\sim\cr}}}
-    {\vcenter{\offinterlineskip\halign{\hfil$\textstyle##$\hfil\cr
-          <\cr\sim\cr}}}
-    {\vcenter{\offinterlineskip\halign{\hfil$\scriptstyle##$\hfil\cr
-          <\cr\sim\cr}}}
-    {\vcenter{\offinterlineskip\halign{\hfil$\scriptscriptstyle##$\hfil\cr
-          <\cr\sim\cr}}}}}
-
-%%%% \ga...Gr"o"ser als ungef"ahr
-\def\ga{\mathrel{\mathchoice {\vcenter{\offinterlineskip\halign{\hfil
-          $\displaystyle##$\hfil\cr>\cr\sim\cr}}}
-    {\vcenter{\offinterlineskip\halign{\hfil$\textstyle##$\hfil\cr
-          >\cr\sim\cr}}}
-    {\vcenter{\offinterlineskip\halign{\hfil$\scriptstyle##$\hfil\cr
-          >\cr\sim\cr}}}
-    {\vcenter{\offinterlineskip\halign{\hfil$\scriptscriptstyle##$\hfil\cr
-          >\cr\sim\cr}}}}}
-
 %%%% Degrees, arcmin, arcsec
 \def\degr{\hbox{$^\circ$}}
 
@@ -221,7 +197,7 @@
   \rhead{}
   \cfoot{\small\bfseries\sffamily
     Page {\textbf{\thepage}}  of {\textbf{\pageref{LastPage}}} }
-  \rfoot{\raisebox{-0.3\height}{\includegraphics[width=25mm]{metis_noText.pdf}} }
+  \rfoot{\raisebox{-0.3\height}{\includegraphics[width=25mm]{metis_noText}} }
 }
 
 \fancypagestyle{plain}{\fancyhf{} \headerformat}
@@ -258,10 +234,10 @@
 
 
 % === biblatex Definitions ====================================================
-\bibstyle{apj}
-\addbibresource{references.bib}
-\newbibmacro{string+doiurlisbn}[1]{\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}
-\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
+%\bibstyle{apj}
+%\addbibresource{references.bib}
+%\newbibmacro{string+doiurlisbn}[1]{\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}
+%\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 
 
 % === glossaries definitions  =================================================
@@ -293,7 +269,7 @@
 
 % Logo
 \vspace*{0cm}
-\includegraphics[width=6.69cm]{metis_logo.pdf}
+\includegraphics[width=6.69cm]{metis_logo}
 
 \vspace*{\fill}
 
