@@ -77,7 +77,6 @@
 \usepackage{placeins}
 \usepackage{enumitem}
 \usepackage{acronym}
-\usepackage{filecontents}
 
 \usepackage{xcolor}
 \usepackage{colortbl}
@@ -127,8 +126,6 @@
 \lstloadlanguages{csh, c}
 
 \usepackage{textcomp}
-
-\usepackage{subfloat}
 
 %% Write requirements like this: \REQ{METIS-xxxx}
 \newcommand{\REQ}[1]{\href{https://polarion.astron.nl/polarion/\#/project/METIS/workitem?id=#1}{\textcolor{brown}{#1}}}
@@ -186,7 +183,7 @@
 
 
 % === biblatex Definitions ====================================================
-\begin{filecontents}{references.bib}
+\begin{filecontents}[overwrite,nosearch]{references.bib}
 @Manual{DRLD,
   title =        {METIS Data Reduction Library Design},
   version =      {1-0},
