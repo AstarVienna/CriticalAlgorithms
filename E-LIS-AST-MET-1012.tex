@@ -247,12 +247,9 @@
 
 \bibstyle{apj}
 \addbibresource{references.bib}
-\newbibmacro{string+doiurlisbn}[1]{\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}
-\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 
 
 % === glossaries definitions  =================================================
-% \input{../common/metis_glossary.tex}     % the common glossary file
 \renewcommand{\glossarysection}[2][]{}   % Avoid the heading 'Glossary'
 \setlength{\LTleft}{0pt}                 % make all longtables aligned left
 \setlength{\glsdescwidth}{0.8\textwidth}
@@ -330,10 +327,6 @@
   \end{tabular}
 \end{center}
 
-%%% Local Variables:
-%%% TeX-master: "METIS_DRLVT"
-%%% End:
-
 
 % === MAIN TEXT================================================================
 
@@ -379,9 +372,9 @@
 \label{sec:intro}
 
 \subsection{Scope}
-The critical algorithms as described in section 10 of the METIS Data Reduction Library Design \cite{DRLD} are stored in a git repository at \url{https://github.com/AstarVienna/CriticalAlgorithms}.
+The critical algorithms as described in section 10 of the METIS Data Reduction Library Design~\cite{DRLD} are stored in a git repository at \url{https://github.com/AstarVienna/CriticalAlgorithms}.
 
-Only four of the critical algorithms require prototyping, as described in \cite{DRLD}.
+Only four of the critical algorithms require prototyping, as described in~\cite{DRLD}.
 These are
 \begin{enumerate}
     \item[5a.] Long Slit Spectroscopy (LSS) Wavelength calibration and distortion correction.\\
@@ -411,7 +404,7 @@ These are
 %\label{ssec:acronyms}
 %\input{acronyms.tex}
 
-\clearpage
+%\clearpage
 
 
 
