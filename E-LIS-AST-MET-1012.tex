@@ -72,7 +72,7 @@
 \usepackage{placeins}
 \usepackage{enumitem}
 \usepackage{acronym}
-
+\usepackage{filecontents}
 
 \usepackage{xcolor}
 \usepackage{colortbl}
@@ -234,10 +234,20 @@
 
 
 % === biblatex Definitions ====================================================
-%\bibstyle{apj}
-%\addbibresource{references.bib}
-%\newbibmacro{string+doiurlisbn}[1]{\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}
-%\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
+\begin{filecontents}{references.bib}
+@Manual{DRLD,
+  title =        {METIS Data Reduction Library Design},
+  version =      {1-0},
+  number =       {E-REP-AST-MET-1006},
+  keywords =     {applicable},
+  note =         {2023-09-18}
+  }
+\end{filecontents}
+
+\bibstyle{apj}
+\addbibresource{references.bib}
+\newbibmacro{string+doiurlisbn}[1]{\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}
+\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 
 
 % === glossaries definitions  =================================================
@@ -358,7 +368,7 @@
 %  This page intentionally left blank
 %\end{center}
 %\vfill
-\clearpage
+%\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -368,16 +378,26 @@
 \label{sec:intro}
 
 \subsection{Scope}
-Critical Algorithms
+The critical algorithms as described in section 10 of the METIS Data Reduction Library Design \cite{DRLD} are stored in a git repository at \url{https://github.com/AstarVienna/CriticalAlgorithms}.
 
+Only four of the critical algorithms require prototyping, as described in \cite{DRLD}.
+These are
+\begin{enumerate}
+    \item[5a.] Long Slit Spectroscopy (LSS) Wavelength calibration and distortion correction.\\
+        See directory \CODE{5a-LSS-wavelength-calibration-PyReduce-ELT}.
+    \item[5b.] Integral Field Unit (IFU) Wavelength calibration and distortion correction.\\
+        See directory \CODE{5b-IFU-distortion}.
+    \item[9.] IFU image and cube reconstruction.\\
+        See directory \CODE{9-IFU-image-reconstruction}.
+    \item[11.] Angular Differential Imaging algorithm.\\
+        See directory \CODE{11-ADI-algorithm}.
+\end{enumerate}
 
+\subsection{Applicable documents}
+\begin{refcontext}[labelprefix=AD]
+  \printbibliography[keyword=applicable, heading=none]
+\end{refcontext}
 
-%\subsection{Applicable documents}
-%\begin{refcontext}[labelprefix=AD]
-%  \printbibliography[keyword=applicable, heading=none]
-%\end{refcontext}
-%
-%
 %\subsection{Reference documents}
 %\begin{refcontext}[labelprefix=RD]
 %  \printbibliography[keyword=reference, heading=none]
