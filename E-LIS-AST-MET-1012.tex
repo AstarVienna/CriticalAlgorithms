@@ -1,3 +1,5 @@
+%! suppress = UnresolvedReference
+%! suppress = NonMatchingIf
 %% E-LIS-AST-MET-1012.tex
 %%
 %% Front page for Critical algorithms.
@@ -126,65 +128,15 @@
 
 \usepackage{subfloat}
 
-%% Write recipe names like this: \REC{metis_do_stuff}
-\lstdefinestyle{RECstyle}{%
-  basicstyle=\ttfamily\color{darkgreen}%
-  \lst@ifdisplaystyle\scriptsize\fi}
-\newcommand{\REC}[1]{\lstinline[style=RECstyle]!#1!}
-
 %% Write requirements like this: \REQ{METIS-xxxx}
 \newcommand{\REQ}[1]{\href{https://polarion.astron.nl/polarion/\#/project/METIS/workitem?id=#1}{\textcolor{brown}{#1}}}
 
 %% Write code snippets like this: \CODE{SOMETHING==ELSE}
 \newcommand{\CODE}[1]{\lstinline[]!#1!}
 
-%% Use environment recipedef to define a new recipe.
-\newenvironment{recipedef}
-{% begin code
-  \begin{tcolorbox}[breakable,enhanced jigsaw]%
-    \begin{longtable}{p{0.24\hsize}p{0.74\hsize}}}
-      {% end code
-    \end{longtable}%
-  \end{tcolorbox}}
-
-%%%%% This is a definition that has the flow diagram within the box:
-%% \newcommand{\theimage}{}  % dummy definition
-%% \newenvironment{recipedef}[1]
-%% {% begin
-%% code
-%% \renewcommand{\theimage}{#1}
-%% \begin{tcolorbox}%
-%%   \begin{tabular}{p{0.24\hsize}p{0.74\hsize}}
-%%   }%
-%%     {% end code
-%%   \end{tabular}%
-%%   \begin{center}%
-%%     \includegraphics[width=0.6\textwidth]{\theimage}%
-%%   \end{center}%
-%% \end{tcolorbox}}
-
-
-%% Proper typography for micrometer
-\usepackage{upgreek}
-\newcommand{\micron}{\upmu\mathrm{m}}
-
-%% Ion
-\DeclareRobustCommand{\ion}[2]{%
-  \textup{#1{\mdseries\textsc{#2}}}%
-}
-
-%%%% Degrees, arcmin, arcsec
-\newcommand{\degr}{\hbox{$^\circ$}}
-
-\newcommand{\arcmin}{\hbox{$^\prime$}}
-
-\newcommand{\arcsec}{\hbox{$^{\prime\prime}$}}
-
 %% Bright red for things that still need to be looked at. None of
 %% these should appear in the release version
 \newcommand{\TODO}[1]{\textcolor{red}{\bfseries TODO: #1}}
-
-\newcommand{\intentblankpage}{}
 
 %% paragraph column, centred text
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
@@ -372,6 +324,7 @@
 \label{sec:intro}
 
 \subsection{Scope}
+\label{ssec:scope}
 The critical algorithms as described in section 10 of the METIS Data Reduction Library Design~\cite{DRLD} are stored in a git repository at \url{https://github.com/AstarVienna/CriticalAlgorithms}.
 
 Only four of the critical algorithms require prototyping, as described in~\cite{DRLD}.
@@ -388,25 +341,22 @@ These are
 \end{enumerate}
 
 \subsection{Applicable documents}
+\label{ssec:ad}
 \begin{refcontext}[labelprefix=AD]
   \printbibliography[keyword=applicable, heading=none]
 \end{refcontext}
 
 %\subsection{Reference documents}
+%\label{ssec:rd}
 %\begin{refcontext}[labelprefix=RD]
 %  \printbibliography[keyword=reference, heading=none]
 %\end{refcontext}
-
-
 %\clearpage
 
 %\subsection{Acronyms}
 %\label{ssec:acronyms}
 %\input{acronyms.tex}
-
 %\clearpage
-
-
 
 \end{document}
 
