@@ -180,6 +180,9 @@ cython_debug/
 *.fls
 *.synctex.gz
 
+# references.bib is generated automatically
+references.bib
+
 # tikz results (should be in figures/)
 tikz/*.pdf
 
