@@ -332,8 +332,11 @@
 \label{ssec:scope}
 The critical algorithms as described in section 10 of the METIS Data Reduction Library Design~\cite{DRLD} are stored in a git repository at \url{https://github.com/AstarVienna/CriticalAlgorithms}.
 
-Only four of the critical algorithms require prototyping, as described in~\cite{DRLD}.
-These are
+Ten algorithms were deemed critical at the Preliminary Design Review (PDR).
+Only four of the algorithms are still considered critical and require prototyping.
+The rationale for which algorithms are critical is given in~\cite{DRLD}.
+
+The four algorithms that are prototyped are the following:
 \begin{enumerate}
     \item[5a.] Long Slit Spectroscopy (LSS) Wavelength calibration and distortion correction.\\
         See directory \CODE{5a-LSS-wavelength-calibration-PyReduce-ELT}.
@@ -345,12 +348,14 @@ These are
         See directory \CODE{11-ADI-algorithm}.
 \end{enumerate}
 
-\subsection{Installation}
-\label{ssec:installation}
-First install git-lfs, then clone the repository.
 
-\subsubsection{Git LFS}
-\label{sssec:gitlfs}
+\section{Installation}
+\label{sec:installation}
+This section describes how to clone the repository.
+The instructions for running the prototypes are given in their respective directories and in~\cite{DRLD}.
+
+\subsection{Git LFS}
+\label{ssec:gitlfs}
 The repository uses git-lfs and git-submodules.
 It is therefore necessary to install git-lfs.
 This has to be done only once, and might already be done for your setup.
@@ -366,8 +371,8 @@ Then initialize git-lfs:
 git lfs install
 \end{lstlisting}
 
-\subsubsection{Cloning the repository}
-\label{sssec:cloning}
+\subsection{Cloning the repository}
+\label{ssec:cloning}
 
 The repository can be cloned once git-lfs is installed and initialized:
 
