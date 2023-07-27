@@ -322,6 +322,12 @@
 \section{Introduction}
 \label{sec:intro}
 
+\subsection{Applicable documents}
+\label{ssec:ad}
+\begin{refcontext}[labelprefix=AD]
+  \printbibliography[keyword=applicable, heading=none]
+\end{refcontext}
+
 \subsection{Scope}
 \label{ssec:scope}
 The critical algorithms as described in section 10 of the METIS Data Reduction Library Design~\cite{DRLD} are stored in a git repository at \url{https://github.com/AstarVienna/CriticalAlgorithms}.
@@ -339,11 +345,36 @@ These are
         See directory \CODE{11-ADI-algorithm}.
 \end{enumerate}
 
-\subsection{Applicable documents}
-\label{ssec:ad}
-\begin{refcontext}[labelprefix=AD]
-  \printbibliography[keyword=applicable, heading=none]
-\end{refcontext}
+\subsection{Installation}
+\label{ssec:installation}
+First install git-lfs, then clone the repository.
+
+\subsubsection{Git LFS}
+\label{sssec:gitlfs}
+The repository uses git-lfs and git-submodules.
+It is therefore necessary to install git-lfs.
+This has to be done only once, and might already be done for your setup.
+
+First install git-lfs, which depends on your specific system.
+For example on Ubuntu do
+\begin{lstlisting}
+sudo apt-get install git-lfs
+\end{lstlisting}
+
+Then initialize git-lfs:
+\begin{lstlisting}
+git lfs install
+\end{lstlisting}
+
+\subsubsection{Cloning the repository}
+\label{sssec:cloning}
+
+The repository can be cloned once git-lfs is installed and initialized:
+
+\begin{lstlisting}
+git clone --recurse-submodules https://github.com/AstarVienna/CriticalAlgorithms.git
+\end{lstlisting}
+
 
 %\subsection{Reference documents}
 %\label{ssec:rd}
